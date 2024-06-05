@@ -2,112 +2,236 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- FAVIVON LINK -->
+    <link rel="icon" href="https://icon-library.com/images/weather-icon/weather-icon-14.jpg" />
+
+    <!-- BOX ICONS LINK -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- TAILWIND LINK -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Weather App</title>
-    <link rel="shortcut icon" href="./images/3d-weather-icon-day-free-png.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <header id="header">
+    <main>
         <div class="container">
-            <div class="wrapper-header">
-                <h2>Weather App<img class="header-img"
-                        src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
-                        alt="Weather-icon"> </h2>
-                <form class="search-form" id="search-form">
-                    <input autocomplete="off" type="text" placeholder="Search any city..." id="search-input" required>
-                    <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-                <div class="header-left">
-                    <div class="theme-toggle">
-                        <input type="checkbox" id="theme">
-                        <label for="theme">
-                            <i class="bi bi-sun-fill"></i>
-                            <i class="bi bi-moon-fill"></i>
-                        </label>
-                    </div>
-                    <a href="./pages/login.html">Login</a>
+            <!-- TOP SECTION STARTED -->
+            <div class="top-section flex justify-between mt-[63px] items-center">
+                <div class="switch-mode">
+                    <i class="bx bx-toggle-left text-[70px] cursor-pointer"></i>
+                </div>
+
+
+                <div class="search-country w-[803px] h-[62px] flex items-center">
+                    <i class="bx bx-search text-[40px] text-[#666] relative left-[70px]"></i>
+                    <input type="text" placeholder="Search for your preffered city..."
+                        class="search w-[803px] h-[62px] rounded-[40px] shadow-lg border-[1px] border-[#00000028] bg-transparent pl-[82px] outline-none text-[18px] text-[#ffffff72]" />
+                </div>
+
+                <div
+                    class="current-location py-[14px] px-[25px] flex items-center gap-2 bg-[#4CBB17] rounded-[40px] shadow-xl cursor-pointer">
+                    <i class="bx bx-current-location text-[35px]"></i>
+                    <h3 class="text-[#fff]">Current Location</h3>
                 </div>
             </div>
+            <!-- TOP SECTION ENDED -->
+
+            <!-- INFORMATION SECTION STARTED -->
+            <div class="information-section container pt-[49px]">
+                <div class="first flex gap-[55px] justify-between items-center">
+                    <div
+                        class="first-child-1 shadox w-[510px] h-[330px] py-[53px] px-[107px] rounded-[30px] text-center">
+                        <h2 class="text-[36px] text-[#fff] font-[700] pb-[29px]">Tashkent</h2>
+
+                        <div class="flex flex-col">
+                            <div class="time text-[96px] text-[#Fff] font-[700]"><span
+                                    class="hour text-[96px] text-[#Fff] font-[700]">09</span>:<span
+                                    class="minute text-[96px] text-[#Fff] font-[700]">03</span></div>
+                            <div class="text-[20px] text-[#fff] font-[400] relative bottom-[20px]"><span
+                                    class="week-day">Thursday</span>, <span class="day">31</span> <span
+                                    class="month">Aug</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="first-child-2 shadox w-[780px] p-[20px] h-[330px] flex justify-between rounded-[30px]">
+                        <div class="div flex flex-col">
+                            <div class="flex items-center gap-[10px] text-[60px] font-[700] text-[#fff]"><span
+                                    class="haa"></span><span class="haa">°C</span></div>
+                            <div class="flex items-center haa relative bottom-[15px]">
+                                <h3 class="text-[18px] font-[600]">Feels like:</h3>
+                                <div class="text-[28px] font-[700] pl-[9px]"><span class="gradus"></span>
+                                    <span>°C</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-[11px] pt-[7px] pl-[26px]">
+                                <i class='bx bx-sun text-[48px] text-[#fff]'></i>
+                                <div class="text-[#FFf]">
+                                    <h4 class="text-[20px] font-[500]">Sunrise</h4>
+                                    <h5 class="text-[16px] font-[500]">06:37 AM</h5>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-[11px] pt-[11px] pl-[26px]">
+                                <i class='bx bx-sun text-[48px] text-[#fff]'></i>
+                                <div class="text-[#FFf]">
+                                    <h4 class="text-[20px] font-[500]">Sunrise</h4>
+                                    <h5 class="text-[16px] font-[500]">06:37 AM</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div flex flex-col">
+                            <div class="condition-img">
+
+                            </div>
+
+                            <h3
+                                class="text-condition text-[32px] text-[#fff] font-[700] text-center relative bottom-[15px]">
+                                Sunny</h3>
+                        </div>
+
+                        <div class="div flex flex-col pt-[20px] gap-[20px]">
+                            <div class="flex">
+                                <div class="flex flex-col gap-[10px] pl-[29px] pr-[24px] text-center">
+                                    <img src="./assets/humidity 1.svg" alt="humidity" class="h-[50px]">
+                                    <div
+                                        class="flex gap-[1px] items-center text-center text-[20px] font-[600] text-[#fff]">
+                                        <span class="humidity"></span><span>%</span>
+                                    </div>
+                                    <h3 class="text-[16px] font-[500] text-[#fff]">Humidity</h3>
+                                </div>
+
+                                <div class="flex flex-col gap-[10px] px-[25px] text-center">
+                                    <img src="./assets/wind 1.svg" alt="wind" class="h-[50px]">
+                                    <div
+                                        class="flex gap-[1px] items-center text-center text-[20px] font-[600] text-[#fff]">
+                                        <span class="wind "></span>
+                                        <span>km/h</span>
+                                    </div>
+                                    <h3 class="text-[16px] font-[500] text-[#fff]">Wind</h3>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="flex flex-col gap-[10px] px-[28px] text-center">
+                                    <img src="./assets/watch.svg" alt="watch" class="h-[50px]">
+                                    <div
+                                        class="flex gap-[1px] items-center text-center text-[20px] font-[600] text-[#fff]">
+                                        <span class="pressure"></span>
+                                        <span>hPa</span>
+                                    </div>
+                                    <h3 class="text-[16px] font-[500] text-[#fff]">Pressure</h3>
+                                </div>
+
+                                <div class="flex flex-col gap-[10px] px-[25px] text-center">
+                                    <img src="./assets/uv-white 1.svg" alt="uv-white" class="h-[50px]">
+                                    <h2 class="uv text-[20px] font-[600] text-[#fff]">8</h2>
+                                    <h3 class="text-[16px] font-[500] text-[#fff]">UV</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="second mt-[50px] flex justify-between gap-[61px]">
+                    <div class="second-child-1 shadox w-[430px] h-[380px] py-[18px] px-[30px] rounded-[30px]">
+                        <h2 class="text-[32px] text-[#fff] font-[700] text-center pb-[5px]">5 Days Forecast:</h2>
+
+                        <div class="flex flex-col">
+                            <div class="flex items-center justify-between">
+                                <img src="./assets/clouds 1.svg" alt="clouds1" class="pr-[10px]">
+                                <h3 class="text-[#fff] text-[24px] font-[600] pr-[10px]">20°C</h3>
+                                <h4 class="text-[#fff] text-[20px] font-[600]">Friday, 1 Sep</h4>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <img src="./assets/clouds 2.svg" alt="clouds2" class="pr-[10px]">
+                                <h3 class="text-[#fff] text-[24px] font-[600] pr-[10px]">22°C</h3>
+                                <h4 class="text-[#fff] text-[18px] font-[600]">Saturday, 2 Sep</h4>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <img src="./assets/clouds 3.svg" alt="" class="pr-[10px]">
+                                <h3 class="text-[#fff] text-[24px] font-[600] pr-[10px]">27°C</h3>
+                                <h4 class="text-[#fff] text-[20px] font-[600]">Sunday, 3 Sep</h4>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <img src="./assets/clouds 4.svg" alt="" class="pr-[10px]">
+                                <h3 class="text-[#fff] text-[24px] font-[600] pr-[10px]">18°C</h3>
+                                <h4 class="text-[#fff] text-[20px] font-[600]">Monday, 4 Sep</h4>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <img src="./assets/clouds 5.svg" alt="" class="pr-[10px]">
+                                <h3 class="text-[#fff] text-[24px] font-[600] pr-[10px] ">16°C</h3>
+                                <h4 class="text-[#fff] text-[20px] font-[600]">Tuesday, 5 Sep</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-child-2 shadox w-[870px] h-[380px] py-[13px] px-[80px] rounded-[30px]">
+                        <h2 class="text-[32px] font-[700] text-center text-white ">Hourly Forecast:</h2>
+
+                        <div class="flex items-center justify-between gap-[10px] pt-[20px]">
+                            <div
+                                class="weather flex flex-col gap-2 py-[13px] pl-[31px] pr-[38px] h-[270px] w-[120px] rounded-[40px] text-center">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">12:00</h4>
+                                <img src="./assets/clouds 3.svg" alt="cloud3">
+                                <h5 class="text-[20px] text-[#fff] font-[700]">26°C</h5>
+                                <img src="./assets/navigation 1.svg" alt="navigation">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">3km/h</h4>
+                            </div>
+
+                            <div
+                                class="weather flex flex-col gap-2 py-[13px] pl-[31px] pr-[38px] h-[270px] w-[120px] rounded-[40px] text-center">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">12:00</h4>
+                                <img src="./assets/clouds 3.svg" alt="cloud3">
+                                <h5 class="text-[20px] text-[#fff] font-[700]">26°C</h5>
+                                <img src="./assets/navigation 1.svg" alt="navigation">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">3km/h</h4>
+                            </div>
+
+                            <div
+                                class="weather flex flex-col gap-2 py-[13px] pl-[31px] pr-[38px] h-[270px] w-[120px] rounded-[40px] text-center">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">12:00</h4>
+                                <img src="./assets/clouds 3.svg" alt="cloud3">
+                                <h5 class="text-[20px] text-[#fff] font-[700]">26°C</h5>
+                                <img src="./assets/navigation 1.svg" alt="navigation">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">3km/h</h4>
+                            </div>
+
+                            <div
+                                class="weather flex flex-col gap-2 py-[13px] pl-[31px] pr-[38px] h-[270px] w-[120px] rounded-[40px] text-center">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">12:00</h4>
+                                <img src="./assets/clouds 3.svg" alt="cloud3">
+                                <h5 class="text-[20px] text-[#fff] font-[700]">26°C</h5>
+                                <img src="./assets/navigation 1.svg" alt="navigation">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">3km/h</h4>
+                            </div>
+
+                            <div
+                                class="weather flex flex-col gap-2 py-[13px] pl-[31px] pr-[38px] h-[270px] w-[120px] rounded-[40px] text-center">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">12:00</h4>
+                                <img src="./assets/clouds 3.svg" alt="cloud3">
+                                <h5 class="text-[20px] text-[#fff] font-[700]">26°C</h5>
+                                <img src="./assets/navigation 1.svg" alt="navigation">
+                                <h4 class="text-[20px] text-[#fff] font-[700]">3km/h</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- INFORMATION SECTION ENDED -->
         </div>
-    </header>
-
-    <div class="container">
-        <section id="hero">
-            <div class="hero-content">
-                <div class="hero-content-main">
-                    <div class="hero-content-info">
-                        <img id="weather-img" src="" alt="">
-                        <h2 id="weather-indicator"></h2>
-                        <p id="weather-location"></p>
-                    </div>
-                    <div class="hero-content-data">
-                        <p id="hero-content-time"></p>
-                        <p class="hero-content-time-name">Sunset Time, Wednesday</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <section id="main">
-        <div class="container">
-
-            <div class="map-wrapper">
-                <iframe id="map" src="" width=100% height="250" allowfullscreen frameborder="0"></iframe>
-            </div>
-            <div class="weather-card-item">
-                <div id="weahter-card-left">
-                    <div class="weahter-info-left">
-                        <div class="weahter-info-water add">
-                            <i class=" add-icon bi bi-droplet-half"></i>
-                            <div>
-                                <p>Humidity</p>
-                                <p id="water"></p>
-                            </div>
-                        </div>
-                        <div class="weahter-info-uv add">
-                            <i class=" add-icon bi bi-brightness-high"></i>
-                            <div>
-                                <p>UV index</p>
-                                <p id="uv"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="weahter-info-right">
-                        <div class="weahter-info-sunsit add">
-                            <i class="add-icon bi bi-sunset"></i>
-                            <div>
-                                <p>Sunset</p>
-                                <p id="sunset"></p>
-                            </div>
-                        </div>
-                        <div class="weahter-info-sunrise add">
-                            <i class="add-icon bi bi-sunrise"></i>
-                            <div>
-                                <p>Sunrise</p>
-                                <p id="sunrise"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="weather-card-right">
-                    <div class="air-pressure">
-                        <p id="air-pressure"></p>
-                    </div>
-                    <div class="compass">
-                        <div class="arrow"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="./script/main.js"></script>
+    </main>
+    <!-- INDEX JS -->
+    <script src="./index.js"></script>
 </body>
 
 </html>
