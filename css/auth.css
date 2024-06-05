@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: blueviolet;
+}
+.auth-form p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+.wrapper{
+    width: 100%;
+    text-align: center;
+    max-width: 500px;
+}
+
+.wrapper  h3{
+    font-size: 35px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.wrapper h3 a {
+    color: #fff;
+}
+
+.auth-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
+}
+
+.auth-form > input {
+    height: 30px;
+    outline: none;
+    padding: 20px 10px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: transparent 0px 0px 5px;
+
+}
+
+
+
+.auth-form > input:focus{
+    box-shadow: blueviolet 0px 0px 5px;
+    border: 1px solid transparent;
+    
+
+}
+
+.auth-form > h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-form > button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.success{
+    background: rgb(113, 169, 27) !important;
+}
+
+
+.error{
+    background: red !important;
+}

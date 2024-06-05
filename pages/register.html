@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h3>
+            <a href="../index.html">Weather App</a>
+        </h3>
+        <form id="regester-form" class="auth-form">
+            <h2>Register</h2>
+            <input autocomplete="off" id="name-input" type="text" placeholder="Enter your name" required>
+            <input autocomplete="off" id="email-input" type="email" placeholder="Enter your email" required>
+            <input autocomplete="off" id="password-input" type="password" placeholder="Create your password" minlength="8" required>
+            <input autocomplete="off" id="avatar-input" type="url" placeholder="Enter your avatar URL" required>
+            <button id="submit-form-btn" type="submit">Register</button>
+            <p>Already have an account? <a href="./login.html">Login</a></p>
+        </form>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../script/resigter.js"></script>
+</body>
+</html>

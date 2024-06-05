@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f8f8ff;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0  auto;
+    padding: 0 30px;
+}
+#main{
+    margin-bottom: 100px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(45px);
+}
+
+.wrapper-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 30px;
+    gap: 20px;
+}
+
+header h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.header-img{
+    width: 60px;
+    height: 60px;
+}
+
+.hero-content-main{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero-content-time-name{
+    font-size: 18px;
+}
+
+.hero-content-data{
+    text-align: end;
+
+}
+
+#hero-content-time{
+    text-align: end;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+
+.search-form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+    max-width: 400px;
+    border-radius: 30px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;  
+    background: #fff;  
+}
+
+
+
+.search-form input{
+     height: 100%;
+     flex: 1;
+     border: none;
+     outline: none;
+     font-size: 18px;
+}
+
+.search-form button{
+    background-color: transparent;
+    border: none;
+    font-size:20px;
+    color: gray;
+}
+
+.bi-moon-fill{
+    display: none;
+}
+
+.theme-toggle{
+    position: relative;
+    width: 55px;
+    height: 26px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.theme-toggle input{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.theme-toggle label{
+    background: blueviolet;
+    color: #fff;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.theme-toggle input:checked + label {
+    left: calc(100% - 26px );
+    transform:  translateY(-50%) rotate(360deg);
+}
+
+
+
+.theme-toggle input:checked + label .bi-sun-fill{
+    display: none;
+
+}
+
+.theme-toggle input:checked + label .bi-moon-fill{
+    display: block; 
+}
+
+#hero{
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-image: url("../images/banner.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  
+ }
+
+ .header-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ }
+
+.hero-content{ 
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0px 0px 30px rgba(159, 101, 189, 0.823);
+    position: relative;
+    z-index: 5;
+    margin-bottom: 30px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+header a{
+    font-size: 18px;
+    padding: 6px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+    border-radius: 10px;
+    background: blueviolet;
+    color: #fff;
+}
+
+#hero::after{
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(4,249,59,0) 0%, rgba(159, 24, 227, 0.564) 100%);
+}
+
+
+.hero-content-info{
+    color: #fff;
+}
+
+.hero-content-info h2{
+    font-size: 100px;
+    margin: 20px 0;
+}
+
+.hero-content-info img {
+    width: 100px;
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+.hero-content-info p {
+    font-size: 18px;
+}
+
+#weahter-card-left{
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
+    height: 230px;
+    gap: 20px;
+}
+
+.line{
+    height: 100%;
+    width: 1px;
+    background: blueviolet;
+}
+
+.weahter-info-right, .weahter-info-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;    
+}
+
+.add-icon{
+    color: blueviolet;
+    font-size: 50px;
+}
+
+
+.add{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.add p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.add p:first-child{
+    margin-bottom: 5px;
+}
+
+#weather-card-right{
+    max-width: 470px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 40px; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
+    height: 230px;
+}
+
+.weather-card-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.air-pressure {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
+    background-image: url(../images/air-pressure.png);
+    background-size: contain;
+}
+
+.compass{
+    width: 175px;
+    height: 175px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
+    border-radius: 50%;
+    background-image: url(https://inquisitive-dolphin-236ac6.netlify.app/images/compass.svg);
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.air-pressure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#air-pressure{
+
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+}
+
+#map{
+    border-radius: 10px;
+}
+
+.map-wrapper{
+    padding: 40px 20px 20px 20px;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
+}
+
+.arrow{
+    height: 40%;
+    width: 2px;
+    background-color: #000;
+    position: relative;
+    transition: 1s;
+
+}
+
+.arrow::after{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-50% );
+    clip-path: polygon(50% 0%, 100% 100%, 50% 81%, 0 100%);
+    background-color: #000;
+}
